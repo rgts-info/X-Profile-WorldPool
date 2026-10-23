@@ -970,6 +970,7 @@ img.zoom-image {
 }
 
 // Text block explanation panels
+/*
 .data-explanation-box {
   background-color: #111418;
   border-radius: 8px;
@@ -988,6 +989,33 @@ img.zoom-image {
     }
   }
 }
+*/
+
+/* ==========================================================================
+   📊 HIGH-READABILITY DATA EXPLANATION PANEL (OPTIMIZED FOR PIXEL 10A)
+   ========================================================================== */
+.data-explanation-box {
+  background-color: #111418;
+  border-radius: 8px;
+  padding: 14px 18px; /* Slightly padded out for breathing room */
+  margin-bottom: 12px;
+  border: 1px solid #27272a;
+
+  p {
+    /* Upgraded from 13.5px to an instant-read font scale */
+    font-size: 15.5px !important; 
+    line-height: 1.65 !important; /* Increased tracking depth keeps text lines separated */
+    color: #cbd5e1; /* Smooth slate grey minimizes glare in sunlight */
+    margin: 0;
+
+    strong {
+      color: #ffdf00; /* High-contrast layout gold emphasizes targets */
+      font-weight: 700;
+    }
+  }
+}
+
+
 
 .strategy-container {
   width: 100%;
@@ -1435,3 +1463,5 @@ img.zoom-image {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
