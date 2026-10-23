@@ -16,7 +16,12 @@ export class HomePage implements OnInit{
 
   running_on_mobile_boolean: boolean = true;
 
-  selectedSection: string = 'hk'; 
+  selectedSection: string = 'world';
+
+  // 🚀 INTERACTIVE DRAWER ENGINE STATE CONTROLLERS
+  showStep2: boolean = false;
+  showStep3: boolean = false;
+
 
   constructor(private currentplatform: CurrentplatformService) {}
 
@@ -26,7 +31,7 @@ export class HomePage implements OnInit{
     this.currentLang = this.currentLang === 'zh' ? 'en' : 'zh';
   }
 
-  shareGuide() {
+  shareGuide(): void {
 
     const shareData = {
       title: 'RGTS Quick Start Guide',
@@ -53,7 +58,7 @@ export class HomePage implements OnInit{
     }
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.currentplatform.logLandingPageVisit('Open').subscribe({
       next: t => console.log("Visit logged:", t),
       error: t => {
@@ -76,6 +81,41 @@ export class HomePage implements OnInit{
 
   }
 
+// Accordion slide trigger methods
+  toggleStep2(): void {
+    this.showStep2 = !this.showStep2;
+  }
 
+  toggleStep3(): void {
+    this.showStep3 = !this.showStep3;
+  }
+
+// 🍏 CORE METHOD TO VALIDATE AND TRANSMIT THE BETA EMAIL REQUEST STRING
+  submitIosBeta(emailString: string): void {
+    const refinedEmail = emailString ? emailString.trim() : '';
+    
+    // Quick regex client verification baseline check
+    if (!refinedEmail || !refinedEmail.includes('@')) {
+      alert(this.currentLang === 'en' 
+        ? 'Please enter a valid email address.' 
+        : '請輸入正確的電郵地址。'
+      );
+      return;
+    }
+
+    // Call service layer pipeline passing the flag anchor string indicator
+    this.currentplatform.logLandingPageVisit('iOS_Beta_Join', refinedEmail).subscribe({
+      next: (response) => {
+        alert(this.currentLang === 'en'
+          ? 'Success! Your email has been Whitelisted for the iOS TestFlight Beta.'
+          : '登記成功！您的電郵已加入 iOS TestFlight 測試名額。'
+        );
+      },
+      error: (err) => {
+        console.error("Beta submission pipeline error:", err);
+        alert('Network connection error. Please try again later.');
+      }
+    });
+  }
 
 }

@@ -631,9 +631,6 @@ img.zoom-image {
   }
 }
 
-
-
-
 // Centered layout shell to keep everything aligned perfectly in the middle of the desktop screen
 .bulletin-header-container {
   max-width: 480px;          // 👈 Crucial: Matches your card width exactly!
@@ -826,7 +823,7 @@ img.zoom-image {
   flex-wrap: nowrap;           
   width: max-content;          
   gap: 14px;                   
-  padding: 10px 40px;          // 👈 Added side-padding padding buffers for zoom headrooms
+  // padding: 10px 40px;          // 👈 Added side-padding padding buffers for zoom headrooms
 }
 
 /*
@@ -972,9 +969,6 @@ img.zoom-image {
   pointer-events: auto; // Restores direct clicking capabilities for desktop links
 }
 
-
-
-
 // Text block explanation panels
 .data-explanation-box {
   background-color: #111418;
@@ -1074,4 +1068,370 @@ img.zoom-image {
 /* Structured padding offsets for the list names */
 .stewards-list p {
   padding-left: 6px;
+}
+
+
+
+//NEW CSS 10232026
+
+/* ==========================================================================
+   🏇 PREMIUM STREAMER FILTER LANDING ENGINE STYLES
+   ========================================================================== */
+.stream-hero-container {
+  background: radial-gradient(circle at top, #1f2833 0%, #161a1e 100%) !important;
+  border: 1.5px solid #ffdf00 !important; /* Premium Gold border bounding box */
+  text-align: center;
+  margin-top: 15px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+.stream-hero-header-accent {
+  background-color: #ffdf00;
+  color: #1a1e24;
+  font-weight: 800;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 0;
+  border-radius: 8px;
+}
+
+.stream-hero-body {
+  padding: 24px 16px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+  }
+}
+
+.stream-hero-intro {
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  margin-bottom: 20px;
+}
+
+/* Formula Telemetry Display Box */
+.formula-display-box {
+  background-color: #0b0c10;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.formula-title {
+  color: #66fcf1; /* Electric Cyan accent */
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formula-line {
+  font-size: 13.5px;
+  color: #e2e8f0;
+  margin: 4px 0;
+  line-height: 1.5;
+  
+  strong { color: #ffffff; }
+}
+
+.formula-footer-remark {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 6px;
+  font-style: italic;
+}
+
+/* Payout Highlights Pill */
+.mini-receipt-pill {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #ffdf00;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* App Download Layout Elements */
+.app-download-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+.native-store-btn {
+  flex: 1;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 14px 0;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.play-store-theme {
+  background-color: #27ae60;
+  color: #ffffff !important;
+}
+
+.testflight-theme {
+  background-color: #ffffff;
+  color: #161a1e !important;
+}
+
+.free-badge-notice {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+
+
+/* ==========================================================================
+   🚀 ACCORDION DRAWERS & ACCENT THEME RULES
+   ========================================================================== */
+.step-card-base {
+  background-color: #1a1e24 !important;
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+}
+
+.style-step1-border { border: 1px solid #ffdf00 !important; } /* Gold */
+.style-step2-border { border: 1px solid #45a29e !important; } /* Soft Teal */
+.style-step3-border { border: 1px solid #2dd36f !important; } /* Green */
+
+.step-card-inner {
+  padding: 16px 20px;
+  text-align: left;
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+  }
+  p {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin: 0 0 16px 0;
+  }
+}
+
+.step-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  //border-radius: 0 0 8px 0;
+  border-radius: 12px;
+}
+.badge-step1 { background-color: #ffdf00; color: #1a1e24; }
+
+/* Interactive Toggle Layout Accordion Buttons */
+.interactive-drawer-toggle-btn {
+  width: 100%;
+  max-width: 480px;
+  background-color: #111418;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 14px 16px;
+  font-size: 14.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:active {
+    background-color: #1a1e24;
+    transform: scale(0.99);
+  }
+}
+
+.toggle-icon {
+  font-size: 12px;
+  color: #66fcf1;
+  background: rgba(102, 252, 241, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Fluid entrance layout keys */
+.drawer-animation {
+  animation: slideDown 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+
+/* ==========================================================================
+   🎯 OPTIMIZED ZERO-OVERWHELM DOWNLOAD & CAPTURE GRID STYLES
+   ========================================================================== */
+.app-download-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px; /* Prevents stretching too wide on tablet/desktop */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 🤖 Android Google Play Button Fine-Tuning */
+.native-store-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 13px !important;
+  height: 42px !important; /* Forces fixed matching container height footprint */
+  padding: 0 10px !important; /* Strips massive vertical padding leakage */
+  border-radius: 6px !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.play-store-theme {
+  background-color: #27ae60;
+  color: #ffffff !important;
+}
+
+/* 🍏 iOS TestFlight Inline Capturing Box */
+.ios-testflight-capture-box {
+  flex: 1.3; /* Gives the form slightly more horizontal tracking room than the store link */
+  background-color: #111418;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 6px 10px !important; /* Compact interior spacer */
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ios-form-title {
+  font-size: 10.5px !important;
+  font-weight: 800;
+  color: #66fcf1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px !important;
+  padding-left: 2px;
+}
+
+.inline-input-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 6px;
+}
+
+/* Scaled down input box canvas */
+.native-capture-input {
+  flex: 2;
+  background-color: #1a1e24;
+  border: 1px solid #334155;
+  color: #ffffff;
+  font-size: 12.5px !important;
+  height: 28px !important; /* Snug height fit inside the form container */
+  padding: 0 8px !important;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: #66fcf1;
+  }
+}
+
+/* Snug Join Beta Button */
+.native-submit-btn {
+  flex: 0.9;
+  background-color: #ffffff;
+  color: #111418;
+  border: none;
+  font-size: 11.5px !important;
+  font-weight: 800;
+  height: 28px !important; /* Matches input height identically */
+  padding: 0 !important;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  &:active {
+    background-color: #cbd5e1;
+    transform: scale(0.96);
+  }
+}
+
+/* Free badge reminder text adjustment */
+.free-badge-notice {
+  font-size: 11.5px !important;
+  color: #94a3b8;
+  margin-top: 14px !important;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive row collapse for very narrow mobile screens */
+@media (max-width: 400px) {
+  .app-download-grid {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+  .native-store-btn {
+    width: 100% !important;
+  }
+  .ios-testflight-capture-box {
+    width: 100% !important;
+    padding: 8px 10px !important;
+  }
+}
+
+
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
