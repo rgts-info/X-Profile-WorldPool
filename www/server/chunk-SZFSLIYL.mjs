@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{a as n}from"./chunk-UZ3GXEV3.mjs";var t=()=>{if(n!==void 0)return n.Capacitor};var i,r;(function(e){e.Unimplemented="UNIMPLEMENTED",e.Unavailable="UNAVAILABLE"})(i||(i={})),(function(e){e.Body="body",e.Ionic="ionic",e.Native="native",e.None="none"})(r||(r={}));var d={getEngine(){let e=t();if(e?.isPluginAvailable("Keyboard"))return e.Plugins.Keyboard},getResizeMode(){let e=this.getEngine();return e?.getResizeMode?e.getResizeMode().catch(o=>{if(o.code!==i.Unimplemented)throw o}):Promise.resolve(void 0)}};export{r as a,d as b};

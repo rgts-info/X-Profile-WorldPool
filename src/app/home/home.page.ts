@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CurrentplatformService } from '../providers/currentplatform.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +8,17 @@ import { ViewEncapsulation } from '@angular/core';
   standalone: false,
   encapsulation: ViewEncapsulation.None
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
-  // Set 'zh' (Cantonese) as the default language
+  // Set 'en' (English) as the default language for X profile
   // currentLang: 'zh' | 'en' = 'zh';
-  currentLang: string = 'zh';
+  currentLang: string = 'en';
 
   running_on_mobile_boolean: boolean = true;
 
   selectedSection: string = 'hk'; 
 
-  constructor() {}
+  constructor(private currentplatform: CurrentplatformService) {}
 
 
   // Function to switch languages
@@ -52,6 +52,30 @@ export class HomePage {
       });
     }
   }
+
+  ngOnInit() {
+    this.currentplatform.logLandingPageVisit('Open').subscribe({
+      next: t => console.log("Visit logged:", t),
+      error: t => {
+        console.error("Log failed:", t);
+        if (t.error) console.error("Server response:", t.error);
+        if (t.status) console.error("HTTP status:", t.status);
+      }
+    });
+  }
+
+  download_click(): void{
+    this.currentplatform.logLandingPageVisit('Download').subscribe({
+      next: t => console.log("Visit logged:", t),
+      error: t => {
+        console.error("Log failed:", t);
+        if (t.error) console.error("Server response:", t.error);
+        if (t.status) console.error("HTTP status:", t.status);
+      }
+    });
+
+  }
+
 
 
 }
