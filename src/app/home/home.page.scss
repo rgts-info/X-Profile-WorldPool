@@ -1117,7 +1117,8 @@ img.zoom-image {
   background-color: #ffdf00;
   color: #1a1e24;
   font-weight: 800;
-  font-size: 12.5px;
+  //font-size: 12.5px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 6px 0;
@@ -1268,6 +1269,7 @@ img.zoom-image {
 }
 */
 
+/*
 .step-badge {
   display: inline-block;
   font-size: 11px;
@@ -1278,6 +1280,8 @@ img.zoom-image {
   //border-radius: 0 0 8px 0;
   border-radius: 12px;
 }
+*/
+
 .badge-step1 { background-color: #ffdf00; color: #1a1e24; }
 
 /* Interactive Toggle Layout Accordion Buttons */
@@ -1513,7 +1517,7 @@ img.zoom-image {
 /* Also bump up the small Step Badges slightly to match the layout weight */
 .step-badge {
   display: inline-block;
-  font-size: 12px !important; /* Boosted from 11px */
+  font-size: 15px !important; /* Boosted from 11px */
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
