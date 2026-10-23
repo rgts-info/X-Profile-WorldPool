@@ -1248,6 +1248,7 @@ img.zoom-image {
 .style-step2-border { border: 1px solid #45a29e !important; } /* Soft Teal */
 .style-step3-border { border: 1px solid #2dd36f !important; } /* Green */
 
+/*
 .step-card-inner {
   padding: 16px 20px;
   text-align: left;
@@ -1265,6 +1266,7 @@ img.zoom-image {
     margin: 0 0 16px 0;
   }
 }
+*/
 
 .step-badge {
   display: inline-block;
@@ -1465,3 +1467,56 @@ img.zoom-image {
 }
 
 
+/* ==========================================================================
+   📊 ACCORDION STEP BLOCKS TYPOGRAPHY ENGINE (OPTIMIZED FOR PIXEL 10A)
+   ========================================================================== */
+.step-card-inner {
+  padding: 20px; /* Expanded interior breathing room */
+  text-align: left;
+  
+  h3 {
+    /* Upgraded from 18px for clear structural punch */
+    font-size: 20px !important; 
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.3px;
+  }
+
+  p {
+    /* Boosted from 13.5px for effortless readability */
+    font-size: 15.5px !important; 
+    line-height: 1.65 !important;
+    color: #cbd5e1;
+    margin: 0 0 12px 0;
+
+    strong {
+      color: #ffffff;
+    }
+  }
+
+  /* 🎯 Specific target override for the inner *Note text string */
+  .ui-desc {
+    font-size: 14.5px !important; /* Scaled cleanly just below the main text */
+    line-height: 1.6 !important;
+    color: #94a3b8 !important; /* Soft steel gray accent lowers visual weight for notes */
+    margin: 0;
+    display: block;
+    
+    em {
+      color: #66fcf1; /* Electric Cyan accent lets the note pop neatly */
+      font-style: italic;
+    }
+  }
+}
+
+/* Also bump up the small Step Badges slightly to match the layout weight */
+.step-badge {
+  display: inline-block;
+  font-size: 12px !important; /* Boosted from 11px */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 14px !important;
+  border-radius: 12px;
+}
