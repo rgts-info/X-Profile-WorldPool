@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Added: 09162026-->
+<!-- 🎨 Step 1: Added background color directly to the root element -->
+<html lang="en" style="background-color: #1a1a1a;">
+
+<head>
+  <meta charset="utf-8" />
+  <title>User Bulletin</title>
+  <base href="./">
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- -->
+  <!-- 🎨 Step 2: Modern tag tells iOS & Android browsers to tint the top status area black -->
+  <meta name="theme-color" content="#1a1a1a" />
+  
+  <!-- ❌ Remove the default Ionic restriction line that locks down scaling: -->
+  <!-- <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <!-- REMARK: 08262026
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  -->
+  <!--  Replace it with the modern, expandable responsive viewport tag: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>
