@@ -1524,3 +1524,120 @@ img.zoom-image {
   padding: 6px 14px !important;
   border-radius: 12px;
 }
+
+
+/* ==========================================================================
+   🏇 VERTICALLY STACKED MOBILE-FIRST CONVERSION FUNNEL
+   ========================================================================== */
+.app-download-stacked-column {
+  display: flex;
+  flex-direction: column; /* 👈 Forces buttons to stack into separate rows cleanly */
+  gap: 14px; /* Roomy vertical spacing buffer prevents accidental mis-clicks */
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Row 1: Expanded Google Play Button */
+.native-store-btn {
+  width: 100% !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 21px !important; /* Increased font scale for distinct readability */
+  height: 46px !important; /* Thicker mobile footprint hitbox */
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.1s ease;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.play-store-theme {
+  background-color: #27ae60;
+  color: #ffffff !important;
+}
+
+/* Row 2: Full-Width Stacked iOS Capture Box */
+.ios-testflight-capture-box.full-width-stacked-row {
+  width: 100% !important;
+  background-color: #111418;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  padding: 12px 14px !important; /* Generous padded interior canvas */
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.ios-form-title {
+  font-size: 11.5px !important; /* Clear uppercase header */
+  font-weight: 800;
+  color: #66fcf1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px !important; /* Pushes input layout group down cleanly */
+}
+
+.inline-input-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Deep, High-Contrast Email Input Box */
+.native-capture-input {
+  flex: 2.2; /* Allocates maximum screen width real estate to your typing track */
+  background-color: #1a1e24;
+  border: 1px solid #334155;
+  color: #ffffff;
+  font-size: 15px !important; /* Matches your core font size threshold for instant legibility */
+  height: 40px !important; /* Deep input frame makes typing effortless */
+  padding: 0 12px !important;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: #66fcf1;
+    background-color: #16191f;
+  }
+}
+
+/* Punchy Full-Height Submit Selector */
+.native-submit-btn {
+  flex: 0.8;
+  background-color: #ffffff;
+  color: #111418;
+  border: none;
+  font-size: 13.5px !important;
+  font-weight: 800;
+  height: 40px !important; /* Aligns flush with the matching input height */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  &:active {
+    background-color: #cbd5e1;
+    transform: scale(0.96);
+  }
+}
+
+/* Sub-text spacer adjustment */
+.free-badge-notice {
+  font-size: 12px !important;
+  color: #94a3b8;
+  margin-top: 16px !important;
+  font-weight: 500;
+  text-align: center;
+}

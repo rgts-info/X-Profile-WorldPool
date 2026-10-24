@@ -180,17 +180,17 @@
       </div> -->
 
       <!-- 🚀 RE-ENGINEERED DOWNLOAD & IOS EMAIL CAPTURE GRID -->
-      <div class="news-bulletin-wrapper stream-hero-container">
+      <!-- <div class="news-bulletin-wrapper stream-hero-container">
         <div class="stream-hero-body">
           
-          <!-- Unified Download Form Layout Wrapper Block -->
+          <!&& Unified Download Form Layout Wrapper Block &&>
           <div class="app-download-grid">
-            <!-- Android Block Target -->
+            <!&& Android Block Target &&>
             <a href="https://play.google.com/store/apps/details?id=com.rgtshk.app" target="_blank" class="native-store-btn play-store-theme" (click)="download_click()">
               🤖 Google Play Store
             </a>
 
-            <!-- iOS Interactive Form Inline Box Integration -->
+            <!&& iOS Interactive Form Inline Box Integration &&>
             <div class="ios-testflight-capture-box">
               <div class="ios-form-title">🍏 iOS TestFlight Beta Program</div>
               <div class="inline-input-group">
@@ -204,7 +204,39 @@
 
           <div class="free-badge-notice">✓ 100% Free App — No Subscription Required</div>
         </div>
+      </div> -->
+
+
+      <!-- 🚀 UPGRADED STACKED DOWNLOAD CONTAINER & EXPANDED EMAIL CAPTURE -->
+      <div class="news-bulletin-wrapper stream-hero-container">
+        <div class="stream-hero-body">
+          
+          <!-- Stacked Form Layout Container -->
+          <div class="app-download-stacked-column">
+            
+            <!-- Row 1: Android Destination Block -->
+            <a href="https://play.google.com/store/apps/details?id=com.rgtshk.app" target="_blank" class="native-store-btn play-store-theme" (click)="download_click()">
+              🤖 Google Play Store
+            </a>
+
+            <!-- Row 2: Expanded Full-Width iOS Interactive Form Box -->
+            <div class="ios-testflight-capture-box full-width-stacked-row">
+              <div class="ios-form-title">🍏 iOS TestFlight Beta Program</div>
+              <div class="inline-input-group">
+                <input type="email" placeholder="Enter your email address" #iosEmail class="native-capture-input" />
+                <button type="button" class="native-submit-btn" (click)="submitIosBeta(iosEmail.value); iosEmail.value=''">
+                  Join Beta
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="free-badge-notice">✓ 100% Free App — No Subscription Required</div>
+        </div>
       </div>
+
+
 
 
       <!-- 流動端分享掣 -->
